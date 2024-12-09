@@ -5,11 +5,21 @@
 #import "TurboSDK.h"
 #import <WindMillSDK/WindMillSDK.h>
 #import "DelegateHandler/IntersititialDelegateHandle.h"
+#import "DelegateHandler/SplashDelegateHandle.h"
+#import "DelegateHandler/RewardDelegateHandle.h"
 
 
-static NSString *versionSDK = @"4.1.0"; ///  版本更新
+
+/**
+ 
+ 4.1.10 重写了RequestAd的request方法
+ 
+ */
+
+static NSString *versionSDK = @"4.1.2"; ///  版本更新
 
 @interface TurboSDK ()
+
 
 @property (nonatomic, strong) WindMillSplashAd *splashAd;
 @property (nonatomic, strong) WindMillIntersititialAd *intersititialAd;
@@ -17,7 +27,9 @@ static NSString *versionSDK = @"4.1.0"; ///  版本更新
 @property (nonatomic, strong) WindMillNativeAdsManager *nativeAdsManager;
 @property (nonatomic, strong) WindMillNativeAdsManager *selfRenderNativeAdsManager;
 @property (nonatomic, strong) WindMillBannerView *bannerView;
+@property (nonatomic,strong) SplashDelegateHandle *splashDelegate;
 @property (nonatomic,strong) IntersititialDelegateHandle *interstitialDelegate;
+
 
 @end
 
@@ -129,6 +141,7 @@ static NSString *versionSDK = @"4.1.0"; ///  版本更新
     if(appid == nil||[appid isKindOfClass:[NSNull class]]){
         
     }else{
+        
         [self getSDKVerson];
         
         /// 如果有值初始化SDK
@@ -143,10 +156,12 @@ static NSString *versionSDK = @"4.1.0"; ///  版本更新
 - (void)loadAndShowSplashWithPlacementId:(NSString *)placementId withBottomView:(UIView *)bottomView withDelegate:(id<WindMillSplashAdDelegate>)delegate{
         
     
+        self.splashDelegate = [[SplashDelegateHandle alloc]initWithDelegateHandler:delegate];
+    
         WindMillAdRequest *request = [WindMillAdRequest request];
         request.placementId = [[NSUserDefaults standardUserDefaults]objectForKey:placementId];
         self.splashAd = [[WindMillSplashAd alloc] initWithRequest:request extra:nil];
-        self.splashAd.delegate = delegate;
+    self.splashAd.delegate = self.splashDelegate;
         self.splashAd.rootViewController = self.splashViewController;
     
 

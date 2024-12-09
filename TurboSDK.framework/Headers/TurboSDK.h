@@ -5,7 +5,7 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 #import <WindMillSDK/WindMillSDK.h>
-
+#import <TurboSDK/TurboRequest.h>
 
 @interface TurboSDK : NSObject
 
@@ -33,8 +33,6 @@
 - (void)loadRewardVideoWithRequest:(WindMillAdRequest *)request WithRewardVideoAd:(WindMillRewardVideoAd *)rewardVideoAd;
 
 - (BOOL)checkRewardRead;
-
-- (NSString *)rewardVideoPlacementId:(NSString *)placemnetId;
 
 
 - (void)showRewardWithRootViewController:(UIViewController *)vc withOptions:(NSDictionary *)option;

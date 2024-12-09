@@ -417,13 +417,17 @@
 			<key>optional</key>
 			<true/>
 		</dict>
+		<key>Headers/TurboRequest.h</key>
+		<data>
+		ztiZaSnDzc+t9A+WkhkBMg/c1qE=
+		</data>
 		<key>Headers/TurboSDK.h</key>
 		<data>
-		/tGsxLXb3liNJKU+noo/hy4XJ4g=
+		R2qRCK/5FtQVCUq0lvwsdjoAc9c=
 		</data>
 		<key>Info.plist</key>
 		<data>
-		RS00FmQo5Ei1DJJKUV00Ht+RyNU=
+		Wc13cvZ7PfjvZADgrkSRcJ3s7xw=
 		</data>
 		<key>MSAdSDK.bundle/Info.plist</key>
 		<data>
@@ -543,7 +547,7 @@
 		</data>
 		<key>PrivateHeaders/TurboSDK.m</key>
 		<data>
-		FrCMV9Cb3T5ENeyIw9jFRzZr6+4=
+		76mJ00PY80F48jWp0bi5rdZoxL0=
 		</data>
 		<key>baidumobadsdk.bundle/PrivacyInfo.xcprivacy</key>
 		<data>
@@ -1917,15 +1921,26 @@
 			<key>optional</key>
 			<true/>
 		</dict>
+		<key>Headers/TurboRequest.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			ztiZaSnDzc+t9A+WkhkBMg/c1qE=
+			</data>
+			<key>hash2</key>
+			<data>
+			zidV9tXlD/nAdvvTP/XiuKwcrHBcpk/GSE4pDCE4cac=
+			</data>
+		</dict>
 		<key>Headers/TurboSDK.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			/tGsxLXb3liNJKU+noo/hy4XJ4g=
+			R2qRCK/5FtQVCUq0lvwsdjoAc9c=
 			</data>
 			<key>hash2</key>
 			<data>
-			SfzddyzhIfNccxRVLX3ZoxF2eWWI8DnWJupbuqG3+ec=
+			pPZj6vTp//jwmC/QBA5aWSyuWnSjSys4eeq7H1U2l1g=
 			</data>
 		</dict>
 		<key>MSAdSDK.bundle/Info.plist</key>
@@ -2251,11 +2266,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			FrCMV9Cb3T5ENeyIw9jFRzZr6+4=
+			76mJ00PY80F48jWp0bi5rdZoxL0=
 			</data>
 			<key>hash2</key>
 			<data>
-			JyBTBWkVKdXZxPGot/RmhXqlUDD6uscuGpgbi/9Qa5E=
+			IKoczB5ck9mBXP6ckC0D7C7qUacC+qLhYuBra/NySv4=
 			</data>
 		</dict>
 		<key>baidumobadsdk.bundle/PrivacyInfo.xcprivacy</key>
