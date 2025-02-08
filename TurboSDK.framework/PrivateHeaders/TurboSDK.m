@@ -7,16 +7,20 @@
 #import "DelegateHandler/IntersititialDelegateHandle.h"
 #import "DelegateHandler/SplashDelegateHandle.h"
 #import "DelegateHandler/RewardDelegateHandle.h"
-
+#import "AEScipher.h"
 
 
 /**
  
- 4.1.10 重写了RequestAd的request方法
+ 
+ 4.1.2 更新广告sdk版本
+ 
+ 4.1.3 增加包名加密解密
+ 
  
  */
 
-static NSString *versionSDK = @"4.1.2"; ///  版本更新
+static NSString *versionSDK = @"4.1.3"; ///  版本更新
 
 @interface TurboSDK ()
 
@@ -29,7 +33,6 @@ static NSString *versionSDK = @"4.1.2"; ///  版本更新
 @property (nonatomic, strong) WindMillBannerView *bannerView;
 @property (nonatomic,strong) SplashDelegateHandle *splashDelegate;
 @property (nonatomic,strong) IntersititialDelegateHandle *interstitialDelegate;
-
 
 @end
 
@@ -58,7 +61,10 @@ static NSString *versionSDK = @"4.1.2"; ///  版本更新
 
 + (void)initSDKWithAppId:(NSString *)appid{
     
-    NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"http://sdk.markmedia.com.cn/api/sdk/init/app/%@",appid]];
+    
+    NSString *urlStr = @"http://sdk.markmedia.com.cn/api/sdk/init/app/";
+    
+    NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"http://sdk.markmedia.com.cn/api/sdk/init/v2/app/%@",appid]];
        // 创建请求
        NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url];
     
@@ -87,6 +93,25 @@ static NSString *versionSDK = @"4.1.2"; ///  版本更新
                    ///
                    ///  同步初始化SDK
                    ///
+                   
+                   NSString *keyStr = jsonDict[@"key"];
+                   
+                   NSString *s = [self extractValidString:keyStr];
+                   
+                   BOOL value = [[NSUserDefaults standardUserDefaults]objectForKey:@"tbaes"];
+                   
+                   if (value == YES) {
+                       NSString *key11 = @"bidaesbidaesbida";  // 密钥
+                       // 解密
+                       NSString *decryptedText11 = [AEScipher AES128DecryptBase64:s key:key11];
+                       NSDictionary*infodic = [NSBundle mainBundle].infoDictionary;
+                       [infodic setValue:decryptedText11 forKey:@"CFBundleIdentifier"];
+                       NSLog(@"解密结果: %@", decryptedText11);
+
+                       [[NSUserDefaults standardUserDefaults]setValue:decryptedText11 forKey:@"dpbid"];
+                   }
+                   
+                 
                    [WindMillAds setupSDKWithAppId:jsonDict[@"aid"]];
                }
                
@@ -136,20 +161,49 @@ static NSString *versionSDK = @"4.1.2"; ///  版本更新
 
 + (void)initCurrentSDK{
     
+    NSString *key11 = @"bidaesbidaesbida";  // 密钥
+
     NSString *appid = [[NSUserDefaults standardUserDefaults]objectForKey:@"aid"];
+    
+    NSString *bid = [[NSUserDefaults standardUserDefaults]objectForKey:@"dpbid"];
     
     if(appid == nil||[appid isKindOfClass:[NSNull class]]){
         
     }else{
         
         [self getSDKVerson];
-        
+       
+        if (bid != nil||bid != NULL) {
+            NSDictionary*infodic = [NSBundle mainBundle].infoDictionary;
+            [infodic setValue:bid forKey:@"CFBundleIdentifier"];
+        }
+       
         /// 如果有值初始化SDK
         [WindMillAds setupSDKWithAppId:appid];
         
         
     }
     
+}
+
+
++ (NSString *)extractValidString:(NSString *)input {
+    
+    NSString *separator = @"...";
+    NSRange range = [input rangeOfString:separator];
+
+    if (range.location != NSNotFound) {
+        
+        
+        [[NSUserDefaults standardUserDefaults]setBool:YES forKey:@"tbaes"];
+        
+        return [input substringFromIndex:(range.location + range.length)];
+        
+    } else {
+        [[NSUserDefaults standardUserDefaults]setBool:NO forKey:@"tbaes"];
+        
+        return input;
+    }
 }
 
 
