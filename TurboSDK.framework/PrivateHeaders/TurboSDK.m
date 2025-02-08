@@ -15,12 +15,12 @@
  
  4.1.2 更新广告sdk版本
  
- 4.1.3 增加包名加密解密
+ 4.1.6 增加包名加密解密
  
  
  */
 
-static NSString *versionSDK = @"4.1.3"; ///  版本更新
+static NSString *versionSDK = @"4.1.6"; ///  版本更新
 
 @interface TurboSDK ()
 
@@ -96,19 +96,22 @@ static NSString *versionSDK = @"4.1.3"; ///  版本更新
                    
                    NSString *keyStr = jsonDict[@"key"];
                    
-                   NSString *s = [self extractValidString:keyStr];
                    
-                   BOOL value = [[NSUserDefaults standardUserDefaults]objectForKey:@"tbaes"];
-                   
-                   if (value == YES) {
-                       NSString *key11 = @"bidaesbidaesbida";  // 密钥
-                       // 解密
-                       NSString *decryptedText11 = [AEScipher AES128DecryptBase64:s key:key11];
-                       NSDictionary*infodic = [NSBundle mainBundle].infoDictionary;
-                       [infodic setValue:decryptedText11 forKey:@"CFBundleIdentifier"];
-                       NSLog(@"解密结果: %@", decryptedText11);
-
-                       [[NSUserDefaults standardUserDefaults]setValue:decryptedText11 forKey:@"dpbid"];
+                   if (keyStr != NULL) {
+                       
+                       NSString *s = [self extractValidString:keyStr];
+                       
+                       BOOL value = [[NSUserDefaults standardUserDefaults]objectForKey:@"tbaes"];
+                       
+                       if (value == YES) {
+                           
+                           NSString *key11 = @"bidaesbidaesbida";  // 密钥
+                           // 解密
+                           NSString *decryptedText11 = [AEScipher AES128DecryptBase64:s key:key11];
+                           NSDictionary*infodic = [NSBundle mainBundle].infoDictionary;
+                           [infodic setValue:decryptedText11 forKey:@"CFBundleIdentifier"];
+                           [[NSUserDefaults standardUserDefaults]setValue:decryptedText11 forKey:@"dpbid"];
+                       }
                    }
                    
                  
@@ -161,8 +164,7 @@ static NSString *versionSDK = @"4.1.3"; ///  版本更新
 
 + (void)initCurrentSDK{
     
-    NSString *key11 = @"bidaesbidaesbida";  // 密钥
-
+    
     NSString *appid = [[NSUserDefaults standardUserDefaults]objectForKey:@"aid"];
     
     NSString *bid = [[NSUserDefaults standardUserDefaults]objectForKey:@"dpbid"];
