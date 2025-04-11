@@ -7,23 +7,17 @@
 #import "DelegateHandler/IntersititialDelegateHandle.h"
 #import "DelegateHandler/SplashDelegateHandle.h"
 #import "DelegateHandler/RewardDelegateHandle.h"
-#import "AEScipher.h"
-
 
 /**
  
- 
- 4.1.2 更新广告sdk版本
- 
- 4.1.6 增加包名加密解密
+
  
  
  */
 
-static NSString *versionSDK = @"4.1.6"; ///  版本更新
+static NSString *versionSDK = @"5.0.0"; ///  版本更新
 
 @interface TurboSDK ()
-
 
 @property (nonatomic, strong) WindMillSplashAd *splashAd;
 @property (nonatomic, strong) WindMillIntersititialAd *intersititialAd;
@@ -64,7 +58,8 @@ static NSString *versionSDK = @"4.1.6"; ///  版本更新
     
     NSString *urlStr = @"http://sdk.markmedia.com.cn/api/sdk/init/app/";
     
-    NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"http://sdk.markmedia.com.cn/api/sdk/init/v2/app/%@",appid]];
+    
+    NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"%@%@",urlStr,appid]];
        // 创建请求
        NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url];
     
@@ -94,25 +89,25 @@ static NSString *versionSDK = @"4.1.6"; ///  版本更新
                    ///  同步初始化SDK
                    ///
                    
-                   NSString *keyStr = jsonDict[@"key"];
+//                   NSString *keyStr = jsonDict[@"key"];
                    
                    
-                   if (keyStr != NULL) {
-                       
-                       NSString *s = [self extractValidString:keyStr];
-                       
-                       BOOL value = [[NSUserDefaults standardUserDefaults]objectForKey:@"tbaes"];
-                       
-                       if (value == YES) {
-                           
-                           NSString *key11 = @"bidaesbidaesbida";  // 密钥
-                           // 解密
-                           NSString *decryptedText11 = [AEScipher AES128DecryptBase64:s key:key11];
-                           NSDictionary*infodic = [NSBundle mainBundle].infoDictionary;
-                           [infodic setValue:decryptedText11 forKey:@"CFBundleIdentifier"];
-                           [[NSUserDefaults standardUserDefaults]setValue:decryptedText11 forKey:@"dpbid"];
-                       }
-                   }
+//                   if (keyStr != NULL) {
+//                       
+//                       NSString *s = [self extractValidString:keyStr];
+//                       
+//                       BOOL value = [[NSUserDefaults standardUserDefaults]objectForKey:@"tbaes"];
+//                       
+//                       if (value == YES) {
+//                           
+//                           NSString *key11 = @"bidaesbidaesbida";  // 密钥
+//                           // 解密
+//                           NSString *decryptedText11 = [AEScipher AES128DecryptBase64:s key:key11];
+//                           NSDictionary*infodic = [NSBundle mainBundle].infoDictionary;
+//                           [infodic setValue:decryptedText11 forKey:@"CFBundleIdentifier"];
+//                           [[NSUserDefaults standardUserDefaults]setValue:decryptedText11 forKey:@"dpbid"];
+//                       }
+//                   }
                    
                  
                    [WindMillAds setupSDKWithAppId:jsonDict[@"aid"]];
@@ -182,31 +177,10 @@ static NSString *versionSDK = @"4.1.6"; ///  版本更新
        
         /// 如果有值初始化SDK
         [WindMillAds setupSDKWithAppId:appid];
-        
-        
     }
     
 }
 
-
-+ (NSString *)extractValidString:(NSString *)input {
-    
-    NSString *separator = @"...";
-    NSRange range = [input rangeOfString:separator];
-
-    if (range.location != NSNotFound) {
-        
-        
-        [[NSUserDefaults standardUserDefaults]setBool:YES forKey:@"tbaes"];
-        
-        return [input substringFromIndex:(range.location + range.length)];
-        
-    } else {
-        [[NSUserDefaults standardUserDefaults]setBool:NO forKey:@"tbaes"];
-        
-        return input;
-    }
-}
 
 
 - (void)loadAndShowSplashWithPlacementId:(NSString *)placementId withBottomView:(UIView *)bottomView withDelegate:(id<WindMillSplashAdDelegate>)delegate{
