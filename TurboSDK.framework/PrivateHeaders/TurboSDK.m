@@ -8,14 +8,11 @@
 #import "DelegateHandler/SplashDelegateHandle.h"
 #import "DelegateHandler/RewardDelegateHandle.h"
 
-/**
- 
 
- 
- 
- */
 
-static NSString *versionSDK = @"5.0.0"; ///  版本更新
+
+
+static NSString *versionSDK = @"5.0.1"; ///  版本更新
 
 @interface TurboSDK ()
 
@@ -88,28 +85,7 @@ static NSString *versionSDK = @"5.0.0"; ///  版本更新
                    ///
                    ///  同步初始化SDK
                    ///
-                   
-//                   NSString *keyStr = jsonDict[@"key"];
-                   
-                   
-//                   if (keyStr != NULL) {
-//                       
-//                       NSString *s = [self extractValidString:keyStr];
-//                       
-//                       BOOL value = [[NSUserDefaults standardUserDefaults]objectForKey:@"tbaes"];
-//                       
-//                       if (value == YES) {
-//                           
-//                           NSString *key11 = @"bidaesbidaesbida";  // 密钥
-//                           // 解密
-//                           NSString *decryptedText11 = [AEScipher AES128DecryptBase64:s key:key11];
-//                           NSDictionary*infodic = [NSBundle mainBundle].infoDictionary;
-//                           [infodic setValue:decryptedText11 forKey:@"CFBundleIdentifier"];
-//                           [[NSUserDefaults standardUserDefaults]setValue:decryptedText11 forKey:@"dpbid"];
-//                       }
-//                   }
-                   
-                 
+                
                    [WindMillAds setupSDKWithAppId:jsonDict[@"aid"]];
                }
                
@@ -150,6 +126,7 @@ static NSString *versionSDK = @"5.0.0"; ///  版本更新
            }
        }];
     
+    
     /// 异步处理SDK
       [self initCurrentSDK];
        // 启动任务
@@ -161,20 +138,12 @@ static NSString *versionSDK = @"5.0.0"; ///  版本更新
     
     
     NSString *appid = [[NSUserDefaults standardUserDefaults]objectForKey:@"aid"];
-    
-    NSString *bid = [[NSUserDefaults standardUserDefaults]objectForKey:@"dpbid"];
-    
+        
     if(appid == nil||[appid isKindOfClass:[NSNull class]]){
         
     }else{
         
         [self getSDKVerson];
-       
-        if (bid != nil||bid != NULL) {
-            NSDictionary*infodic = [NSBundle mainBundle].infoDictionary;
-            [infodic setValue:bid forKey:@"CFBundleIdentifier"];
-        }
-       
         /// 如果有值初始化SDK
         [WindMillAds setupSDKWithAppId:appid];
     }
@@ -205,6 +174,9 @@ static NSString *versionSDK = @"5.0.0"; ///  版本更新
 - (void)loadIntersititialWithPlacementId:(NSString *)placementId withDelegate:(id<WindMillIntersititialAdDelegate>)delegate{
     
    
+    
+    [[NSUserDefaults standardUserDefaults]setObject:placementId forKey:@"selfIntersititial"];
+    
          self.interstitialDelegate = [[IntersititialDelegateHandle alloc]initWithDelegateHandler:delegate];
     
         WindMillAdRequest *request = [WindMillAdRequest request];
@@ -319,7 +291,9 @@ static NSString *versionSDK = @"5.0.0"; ///  版本更新
     WindMillAdRequest *request = [WindMillAdRequest request];
     request.userId = @"user_id";
     request.placementId = [[NSUserDefaults standardUserDefaults]objectForKey:placementId];
-    request.options = @{@"test_key":@"test_value"};//s2s激励时自定义参数，key和value都是媒体开发自定义
+    
+//    request.options = @{@"test_key":@"test_value"};//s2s激励时自定义参数，key和value都是媒体开发自定义
+    
     WindMillBannerView *bannerView = [[WindMillBannerView alloc] initWithRequest:request];
     self.bannerView = bannerView;
     bannerView.delegate = delegate;
