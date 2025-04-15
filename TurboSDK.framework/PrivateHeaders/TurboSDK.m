@@ -12,7 +12,7 @@
 
 
 
-static NSString *versionSDK = @"5.0.1"; ///  版本更新
+static NSString *versionSDK = @"5.0.2"; ///  版本更新
 
 @interface TurboSDK ()
 
@@ -52,6 +52,8 @@ static NSString *versionSDK = @"5.0.1"; ///  版本更新
 
 + (void)initSDKWithAppId:(NSString *)appid{
     
+    
+    [[NSUserDefaults standardUserDefaults]setValue:appid forKey:@"selfAppid"];
     
     NSString *urlStr = @"http://sdk.markmedia.com.cn/api/sdk/init/app/";
     
