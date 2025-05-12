@@ -6,7 +6,7 @@
 	<dict>
 		<key>CSJAdSDK.bundle/Info.plist</key>
 		<data>
-		KtfGgPVuxoEIAYJ3NUdOkJ57xRw=
+		HT7st4GiUb9onRwD4XpHfpwRs7E=
 		</data>
 		<key>CSJAdSDK.bundle/PrivacyInfo.xcprivacy</key>
 		<data>
@@ -147,10 +147,6 @@
 		<key>CSJAdSDK.bundle/bu_play.png</key>
 		<data>
 		KvbQcSQr72Q69PEr/Ov/YALOJas=
-		</data>
-		<key>CSJAdSDK.bundle/bu_playable_loading.png</key>
-		<data>
-		dGi+ySoQQL6kA2TACQISI4Gq9Ig=
 		</data>
 		<key>CSJAdSDK.bundle/bu_replay.png</key>
 		<data>
@@ -323,7 +319,7 @@
 		</dict>
 		<key>CSJAdSDK.bundle/image_assets.json</key>
 		<data>
-		QnVVNOaITkgygLVJ9SR/YR0F1uk=
+		1NOILQatbZ0f57NnC3BSokUvrJ4=
 		</data>
 		<key>CSJAdSDK.bundle/ja.lproj/BULanguage.strings</key>
 		<dict>
@@ -343,10 +339,6 @@
 			<key>optional</key>
 			<true/>
 		</dict>
-		<key>CSJAdSDK.bundle/playable_loading_bg.png</key>
-		<data>
-		RUykUHq104NGKKEdjvqIy6YvFeA=
-		</data>
 		<key>CSJAdSDK.bundle/setup.txt</key>
 		<data>
 		ZM3A57y/v18OGzuvfRFEJO3U2Co=
@@ -391,13 +383,9 @@
 		<data>
 		h6RnnQNTHAn/W+WmMSzPYNWgHTc=
 		</data>
-		<key>CSJAdSDK.bundle/uchain_dsl.bin</key>
-		<data>
-		VxwQ2w+O6dAlPZ2nMYJW6m4M7Yg=
-		</data>
 		<key>CSJAdSDK.bundle/version.txt</key>
 		<data>
-		vrx0J67+HO+rTwHUqDX7RSipZvM=
+		qDPaONT3ZydR9zKwgFjdXW6QbSg=
 		</data>
 		<key>CSJAdSDK.bundle/zh-Hans.lproj/BULanguage.strings</key>
 		<dict>
@@ -423,7 +411,7 @@
 		</data>
 		<key>Headers/TurboSDK.h</key>
 		<data>
-		R2qRCK/5FtQVCUq0lvwsdjoAc9c=
+		JCjIYoUSNR9JVGaT1G6lpf9YEFk=
 		</data>
 		<key>Info.plist</key>
 		<data>
@@ -565,6 +553,14 @@
 		<data>
 		ccLO2DLMq/D7ggIlI4NXKWdpArU=
 		</data>
+		<key>baidumobadsdk.bundle/bd_bg_red_ribbon_circle.png</key>
+		<data>
+		vdStSjfcQ5rERVy9dqQ7xzuZao4=
+		</data>
+		<key>baidumobadsdk.bundle/bd_bg_red_ribbon_rect.png</key>
+		<data>
+		NfWJAhu0i3lGA1G7Dzol6VNRij4=
+		</data>
 		<key>baidumobadsdk.bundle/bd_dislike_complaints.png</key>
 		<data>
 		x9ovWUf3x6RpRMMsh0Ug1FoibWY=
@@ -648,6 +644,14 @@
 		<key>baidumobadsdk.bundle/bd_mob_adIcon.png</key>
 		<data>
 		7AvdrUXb8RFeQh153p1SKvLTqjQ=
+		</data>
+		<key>baidumobadsdk.bundle/bd_mob_ad_33_3_left_bg.png</key>
+		<data>
+		YxbznfHkmdjILcQCsBffBkyIhlk=
+		</data>
+		<key>baidumobadsdk.bundle/bd_mob_ad_33_3_right_bg.png</key>
+		<data>
+		ojlp46V+2F7mpGXycuSIpe7LoOo=
 		</data>
 		<key>baidumobadsdk.bundle/bd_mob_ad_bqtlogo.png</key>
 		<data>
@@ -844,11 +848,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			KtfGgPVuxoEIAYJ3NUdOkJ57xRw=
+			HT7st4GiUb9onRwD4XpHfpwRs7E=
 			</data>
 			<key>hash2</key>
 			<data>
-			mocVQTkC4LWU2cMFrem1V+tWMOKERqrNmJhPhOsBItY=
+			r4QDUmitwYsPbmnsEVV7P2OZKv+sBTHKaITDIFTLxkg=
 			</data>
 		</dict>
 		<key>CSJAdSDK.bundle/PrivacyInfo.xcprivacy</key>
@@ -1234,17 +1238,6 @@
 			<key>hash2</key>
 			<data>
 			n5MLkbblpIG15isReWt2Wi/X+U3mrelbIIiGvBjAFrU=
-			</data>
-		</dict>
-		<key>CSJAdSDK.bundle/bu_playable_loading.png</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			dGi+ySoQQL6kA2TACQISI4Gq9Ig=
-			</data>
-			<key>hash2</key>
-			<data>
-			hcS4StHkUrz7BkgPT6qcE/7cbRc/A02iaKOHgOylR2k=
 			</data>
 		</dict>
 		<key>CSJAdSDK.bundle/bu_replay.png</key>
@@ -1704,11 +1697,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			QnVVNOaITkgygLVJ9SR/YR0F1uk=
+			1NOILQatbZ0f57NnC3BSokUvrJ4=
 			</data>
 			<key>hash2</key>
 			<data>
-			AscGxYgIDMzVXRa4/SaWzlrQopSk46LciPq0Sw9wqA8=
+			QEdDslvZbP4I5lHP1NIBR51MtM2enwshApMXUtv8eJs=
 			</data>
 		</dict>
 		<key>CSJAdSDK.bundle/ja.lproj/BULanguage.strings</key>
@@ -1736,17 +1729,6 @@
 			</data>
 			<key>optional</key>
 			<true/>
-		</dict>
-		<key>CSJAdSDK.bundle/playable_loading_bg.png</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			RUykUHq104NGKKEdjvqIy6YvFeA=
-			</data>
-			<key>hash2</key>
-			<data>
-			r1HT+xJGLwfdFUKq2C6KWYq+dS8owTwAAHYvIcK0L08=
-			</data>
 		</dict>
 		<key>CSJAdSDK.bundle/setup.txt</key>
 		<dict>
@@ -1869,26 +1851,15 @@
 			32P5wHuBd4T5J4kEHQ7GnHrUoFdeQIl7ViYY+2eR2wE=
 			</data>
 		</dict>
-		<key>CSJAdSDK.bundle/uchain_dsl.bin</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			VxwQ2w+O6dAlPZ2nMYJW6m4M7Yg=
-			</data>
-			<key>hash2</key>
-			<data>
-			SBsCtpWrS7xskx3GYITGChpiBgCf8u/pBZesqUbZ9Bw=
-			</data>
-		</dict>
 		<key>CSJAdSDK.bundle/version.txt</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			vrx0J67+HO+rTwHUqDX7RSipZvM=
+			qDPaONT3ZydR9zKwgFjdXW6QbSg=
 			</data>
 			<key>hash2</key>
 			<data>
-			6qyfvo3IXQAuJc0bIFLmZJAHSuuN8ODp4ckqGGUatx0=
+			FVIHpvALUCb+mzv6QuEmVlga8m1i5xsRE8P5iYn1mZQ=
 			</data>
 		</dict>
 		<key>CSJAdSDK.bundle/zh-Hans.lproj/BULanguage.strings</key>
@@ -1932,11 +1903,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			R2qRCK/5FtQVCUq0lvwsdjoAc9c=
+			JCjIYoUSNR9JVGaT1G6lpf9YEFk=
 			</data>
 			<key>hash2</key>
 			<data>
-			pPZj6vTp//jwmC/QBA5aWSyuWnSjSys4eeq7H1U2l1g=
+			TC3x0NwL2quCu+KexjwDOybcl9k7QX1IxXoLn2rRUU8=
 			</data>
 		</dict>
 		<key>MSAdSDK.bundle/Info.plist</key>
@@ -2313,6 +2284,28 @@
 			u9ZwaNdb/LXwMV+HvlowUVAW2OSTx6zOtAxcq37ZbvU=
 			</data>
 		</dict>
+		<key>baidumobadsdk.bundle/bd_bg_red_ribbon_circle.png</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			vdStSjfcQ5rERVy9dqQ7xzuZao4=
+			</data>
+			<key>hash2</key>
+			<data>
+			z/+T2s4Vrz8FCN8Jv34TfddDGYXDw591gtDAIDucZ8o=
+			</data>
+		</dict>
+		<key>baidumobadsdk.bundle/bd_bg_red_ribbon_rect.png</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			NfWJAhu0i3lGA1G7Dzol6VNRij4=
+			</data>
+			<key>hash2</key>
+			<data>
+			Kk3JBrSynks62MlGR4OokKRr7oJRSRI54NYs2FSek9A=
+			</data>
+		</dict>
 		<key>baidumobadsdk.bundle/bd_dislike_complaints.png</key>
 		<dict>
 			<key>hash</key>
@@ -2542,6 +2535,28 @@
 			<key>hash2</key>
 			<data>
 			bq1hH4eK6yxwUx/j8H91C/I1eJIiInsyNHROV2M+nss=
+			</data>
+		</dict>
+		<key>baidumobadsdk.bundle/bd_mob_ad_33_3_left_bg.png</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			YxbznfHkmdjILcQCsBffBkyIhlk=
+			</data>
+			<key>hash2</key>
+			<data>
+			nEmMAPJngn2xPV6cCu2mCGG0K1cfMscJPLmmCIwc8QY=
+			</data>
+		</dict>
+		<key>baidumobadsdk.bundle/bd_mob_ad_33_3_right_bg.png</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			ojlp46V+2F7mpGXycuSIpe7LoOo=
+			</data>
+			<key>hash2</key>
+			<data>
+			ItLsLPE/v8D/MoInaaakh15EGIYY9O6TTxEZjJ+zaA8=
 			</data>
 		</dict>
 		<key>baidumobadsdk.bundle/bd_mob_ad_bqtlogo.png</key>

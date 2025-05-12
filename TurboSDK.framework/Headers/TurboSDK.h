@@ -15,10 +15,12 @@
 + (void)initSDKWithAppId:(NSString *)appid;
 
 
-@property(nonatomic,strong)UIViewController *splashViewController;
+@property (nonatomic,strong) UIViewController *splashViewController;
+
 
 // 开屏
 - (void)loadAndShowSplashWithPlacementId:(NSString *)placementId withBottomView:(UIView *)bottomView withDelegate:(id<WindMillSplashAdDelegate>)delegate;
+
 
 // 插屏
 - (void)loadIntersititialWithPlacementId:(NSString *)placementId withDelegate:(id<WindMillIntersititialAdDelegate>)delegate;
@@ -29,7 +31,6 @@
 
 
 // 激励
-
 - (void)loadRewardVideoWithRequest:(WindMillAdRequest *)request WithRewardVideoAd:(WindMillRewardVideoAd *)rewardVideoAd;
 
 - (BOOL)checkRewardRead;
@@ -41,17 +42,13 @@
 // 信息流
 - (void)loadNativeWithPlacementId:(NSString *)placementId withAdSize:(CGSize )adSize withDelegate:(id<WindMillNativeAdsManagerDelegate>)delegate;
 
-// 广告
 - (UIView *)showNativeViewWithUIViewController:(UIViewController *)vc withDelegate:(id<WindMillNativeAdViewDelegate>)delegate;
-
-
 
 - (NSArray *)getAllNativeAds;
 
 
 // 横幅
 - (UIView *)loadBannerWithPlacementId:(NSString *)placementId withDelegate:(id<WindMillBannerViewDelegate>)delegate withRootViewController:(UIViewController *)vc;
-
 
 
 @end
