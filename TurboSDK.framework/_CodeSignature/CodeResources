@@ -4,6 +4,10 @@
 <dict>
 	<key>files</key>
 	<dict>
+		<key>CHANGELOG.md</key>
+		<data>
+		BS7+dtFJCrX+2J5+rV99j4wmBcs=
+		</data>
 		<key>CSJAdSDK.bundle/Info.plist</key>
 		<data>
 		HT7st4GiUb9onRwD4XpHfpwRs7E=
@@ -411,7 +415,7 @@
 		</data>
 		<key>Headers/TurboSDK.h</key>
 		<data>
-		JCjIYoUSNR9JVGaT1G6lpf9YEFk=
+		xVTaf5bxzBg0WygFWNAGjSfycKQ=
 		</data>
 		<key>Info.plist</key>
 		<data>
@@ -528,6 +532,14 @@
 		<key>MSAdSDK.bundle/twistSmallIcon.png</key>
 		<data>
 		eYDOPo4EpcuujcgAkvdck/HzOkc=
+		</data>
+		<key>MTGSDK.bundle/Info.plist</key>
+		<data>
+		upsuSo1OZ3j0ypuItF6oM5AliKs=
+		</data>
+		<key>MTGSDK.bundle/PrivacyInfo.xcprivacy</key>
+		<data>
+		7pb/tiRb/KGE5KXo5P2+XBbJDLs=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -844,6 +856,17 @@
 	</dict>
 	<key>files2</key>
 	<dict>
+		<key>CHANGELOG.md</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			BS7+dtFJCrX+2J5+rV99j4wmBcs=
+			</data>
+			<key>hash2</key>
+			<data>
+			yYfx+J/DWucn7nGqzeCuo4N+R2FBvay6QTvWnm8kLMw=
+			</data>
+		</dict>
 		<key>CSJAdSDK.bundle/Info.plist</key>
 		<dict>
 			<key>hash</key>
@@ -1903,11 +1926,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			JCjIYoUSNR9JVGaT1G6lpf9YEFk=
+			xVTaf5bxzBg0WygFWNAGjSfycKQ=
 			</data>
 			<key>hash2</key>
 			<data>
-			TC3x0NwL2quCu+KexjwDOybcl9k7QX1IxXoLn2rRUU8=
+			K4ddjsVlUoAhMEN1r9/q517sECknoIiR0jPODe6qmRQ=
 			</data>
 		</dict>
 		<key>MSAdSDK.bundle/Info.plist</key>
@@ -2216,6 +2239,28 @@
 			<key>hash2</key>
 			<data>
 			TVwIj9YDreDfpwjqsY0H7K8JW3+IJ8SDNe5LXJDOJ04=
+			</data>
+		</dict>
+		<key>MTGSDK.bundle/Info.plist</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			upsuSo1OZ3j0ypuItF6oM5AliKs=
+			</data>
+			<key>hash2</key>
+			<data>
+			JEx4eGsWvIT9eydJOYgisLlFY70ySl1fo0KQDhB41m4=
+			</data>
+		</dict>
+		<key>MTGSDK.bundle/PrivacyInfo.xcprivacy</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			7pb/tiRb/KGE5KXo5P2+XBbJDLs=
+			</data>
+			<key>hash2</key>
+			<data>
+			NBdLMoqFX7Ov/mII2GrezPd6ClAP70i6z2JRWl/xxEg=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
