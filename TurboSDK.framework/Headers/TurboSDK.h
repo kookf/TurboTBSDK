@@ -11,6 +11,8 @@
 
 + (instancetype)sharedInstance;
 
++ (NSString *)SDKVersion;
+
 // 初始化sdk
 + (void)initSDKWithAppId:(NSString *)appid;
 
