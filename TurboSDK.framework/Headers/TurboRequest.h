@@ -5,15 +5,16 @@
 //  Created by mac on 2024/11/21.
 //
 
-#import <WindMillSDK/WindMillSDK.h>
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface TurboRequest : WindMillAdRequest
+@interface TurboRequest:NSObject
 
 
 + (id)requestWithPlacementId:(NSString *)placementId;
 
+/// 【必传】，广告位ID。
+@property (nonatomic,copy) NSString *placementId;
 /// 【可选】，媒体用户ID。
 @property (nonatomic,copy) NSString *userId;
 
