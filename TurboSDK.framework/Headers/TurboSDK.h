@@ -27,7 +27,7 @@
 // 插屏
 - (void)loadIntersititialWithPlacementId:(NSString *)placementId withDelegate:(id<WindMillIntersititialAdDelegate>)delegate;
 
-- (BOOL)checkIntersititialRead;
+- (BOOL)checkIntersititialReady;
 
 - (void)showIntersititialWithRootViewController:(UIViewController *)vc withOptions:(NSDictionary *)option;
 
@@ -35,7 +35,7 @@
 // 激励
 - (void)loadRewardVideoWithRequest:(WindMillAdRequest *)request WithRewardVideoAd:(WindMillRewardVideoAd *)rewardVideoAd;
 
-- (BOOL)checkRewardRead;
+- (BOOL)checkRewardReady;
 
 
 - (void)showRewardWithRootViewController:(UIViewController *)vc withOptions:(NSDictionary *)option;
