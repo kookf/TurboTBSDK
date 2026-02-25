@@ -21,11 +21,13 @@
 
 
 // 开屏
-- (void)loadAndShowSplashWithPlacementId:(NSString *)placementId withBottomView:(UIView *)bottomView withDelegate:(id<WindMillSplashAdDelegate>)delegate;
+/// @params userId 用户的唯一标识符，可以是手机号,User ID等。如果没有，可以传nil或空字符。
+- (void)loadAndShowSplashWithPlacementId:(NSString *)placementId withBottomView:(UIView *)bottomView withDelegate:(id<WindMillSplashAdDelegate>)delegate withUserId:(NSString * _Nullable)userId;
 
 
 // 插屏
-- (void)loadIntersititialWithPlacementId:(NSString *)placementId withDelegate:(id<WindMillIntersititialAdDelegate>)delegate;
+/// @params userId 用户的唯一标识符，可以是手机号,User ID等。如果没有，可以传nil或空字符。
+- (void)loadIntersititialWithPlacementId:(NSString *)placementId withDelegate:(id<WindMillIntersititialAdDelegate>)delegate withUserId:(NSString * _Nullable)userId;
 
 - (BOOL)checkIntersititialReady;
 
@@ -33,7 +35,8 @@
 
 
 // 激励
-- (void)loadRewardVideoWithRequest:(WindMillAdRequest *)request WithRewardVideoAd:(WindMillRewardVideoAd *)rewardVideoAd;
+/// @params userId 用户的唯一标识符，可以是手机号,User ID等。如果没有，可以传nil或空字符。
+- (void)loadRewardVideoWithRequest:(WindMillAdRequest *)request WithRewardVideoAd:(WindMillRewardVideoAd *)rewardVideoAd withUserId:(NSString * _Nullable)userId;
 
 - (BOOL)checkRewardReady;
 
@@ -42,7 +45,8 @@
 
 
 // 信息流
-- (void)loadNativeWithPlacementId:(NSString *)placementId withAdSize:(CGSize )adSize withDelegate:(id<WindMillNativeAdsManagerDelegate>)delegate;
+/// @params userId 用户的唯一标识符，可以是手机号,User ID等。如果没有，可以传nil或空字符。
+- (void)loadNativeWithPlacementId:(NSString *)placementId withAdSize:(CGSize )adSize withDelegate:(id<WindMillNativeAdsManagerDelegate>)delegate withUserId:(NSString * _Nullable)userId;
 
 - (UIView *)showNativeViewWithUIViewController:(UIViewController *)vc withDelegate:(id<WindMillNativeAdViewDelegate>)delegate;
 
@@ -50,7 +54,8 @@
 
 
 // 横幅
-- (UIView *)loadBannerWithPlacementId:(NSString *)placementId withDelegate:(id<WindMillBannerViewDelegate>)delegate withRootViewController:(UIViewController *)vc;
+/// @params userId 用户的唯一标识符，可以是手机号,User ID等。如果没有，可以传nil或空字符。
+- (UIView *)loadBannerWithPlacementId:(NSString *)placementId withDelegate:(id<WindMillBannerViewDelegate>)delegate withRootViewController:(UIViewController *)vc withUserId:(NSString * _Nullable)userId;
 
 
 @end
