@@ -29,7 +29,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 
 // 开屏
-- (void)loadAndShowSplashWithPlacementId:(NSString *)placementId withBottomView:(UIView *)bottomView withDelegate:(nullable id<WindMillSplashAdDelegate>)delegate;
+- (void)loadAndShowSplashWithPlacementId:(NSString *)placementId withBottomView:(nullable UIView *)bottomView withDelegate:(nullable id<WindMillSplashAdDelegate>)delegate;
 
 
 // 插屏
