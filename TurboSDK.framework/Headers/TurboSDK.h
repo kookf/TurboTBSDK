@@ -37,7 +37,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (BOOL)checkIntersititialReady;
 
-- (void)showIntersititialWithRootViewController:(UIViewController *)vc withOptions:(NSDictionary *)option;
+- (void)showIntersititialWithRootViewController:(UIViewController *)vc withOptions:(nullable NSDictionary *)option;
 
 
 
@@ -50,7 +50,7 @@ NS_ASSUME_NONNULL_BEGIN
 - (BOOL)checkRewardReady;
 
 
-- (void)showRewardWithRootViewController:(UIViewController *)vc withOptions:(NSDictionary *)option;
+- (void)showRewardWithRootViewController:(UIViewController *)vc withOptions:(nullable NSDictionary *)option;
 
 
 // 信息流
